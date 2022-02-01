@@ -1,6 +1,8 @@
 <script>
 	import Timer from "./components/Timer.svelte";
 	import HowTo from "./components/HowTo.svelte";
+
+	// let progress = 0
 </script>
 
 <main class="container">
@@ -24,13 +26,9 @@
 <style>
 	.hand-washing-app {
 		padding: 2.55rem;
-		/* background-color: orange; */
 		text-align: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 	}
-	/* .hand-washing-app h1 {
-		margin: 20px 0;
-	} */
 </style>
