@@ -2,13 +2,19 @@
 	import Timer from "./components/Timer.svelte";
 	import HowTo from "./components/HowTo.svelte";
 
+	let audio
+
+	function timerEnds(e) {
+		audio.play()
+	}
+
 	// let progress = 0
 </script>
 
 <main class="container">
 	<div class="hand-washing-app">
 		<h1>Hand-Washing App</h1>
-		<Timer />
+		<Timer on:end={timerEnds}/>
 		<HowTo />
 
 		<h3>
@@ -20,6 +26,10 @@
 				Sound Source
 			</a>
 		</h3>
+
+		<audio bind:this={audio}>
+			<source src="sound.wav" />
+		</audio>
 	</div>
 </main>
 
